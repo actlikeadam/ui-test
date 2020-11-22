@@ -1,0 +1,65 @@
+// Colors
+$bg-color: #fff7e6;
+$black: #000;
+$green: #8ccc4e;
+$grey: #c1c1c1;
+$orange: #ffbb36;
+$white: #fff;
+$yellow: #fbd41e;
+
+// Typography
+@font-face {
+  font-family: Gotham;
+  src: url('Gotham');
+}
+
+body {
+  font-family: 'Gotham', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.indejuice {
+  background-color: $bg-color;
+
+  &__header {
+    background-color: $orange;
+    border-top: 4px solid $yellow;
+    height: 70px;
+  }
+
+  &__separator {
+    border: 0;
+    color: $black;
+    line-height: 1em;
+    position: relative;
+    text-align: center;
+    width: 70%;
+
+    &::before {
+      background-color: $grey;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+    }
+
+    &::after {
+      background-color: $white;
+      color: $black;
+      content: attr(data-content);
+      display: inline-block;
+      line-height: 1.5em;
+      padding: 0 0.5em;
+      position: relative;
+    }
+  }
+
+  &__elements {
+    margin: 0 auto;
+    padding: 50px;
+    width: 80%;
+  }
+}
