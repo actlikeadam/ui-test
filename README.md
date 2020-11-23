@@ -2,6 +2,13 @@
 
 This test has been designed with three simple tasks to assess basic UI development experience.
 
+Date: November 2020
+
+Stack: HTML, CSS, JS, ES6
+
+Demo:
+https://indejuice.gattaca.site/
+
 ## Requirements
 
 * Git
