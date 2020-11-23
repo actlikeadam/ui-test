@@ -3,6 +3,7 @@
   "rules": {
     "indentation": 2,
     "max-nesting-depth": 5,
-    "number-leading-zero": null
+    "number-leading-zero": null,
+    "order/properties-alphabetical-order": null
   }
 }

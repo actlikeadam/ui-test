@@ -1,0 +1,24 @@
+/* Mixin */
+// Variables
+$small: 'only screen and (max-width: 576px)';
+$medium: 'only screen and (max-width: 768px)';
+$large: 'only screen and (max-width: 992px)';
+
+// Media queries
+@mixin small {
+  @media #{$small} {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media #{$medium} {
+    @content;
+  }
+}
+
+@mixin large {
+  @media #{$large} {
+    @content;
+  }
+}
