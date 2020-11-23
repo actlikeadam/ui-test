@@ -1,10 +1,11 @@
-@import 'mixin.scss';
+@import 'mixin';
 
 // Colors
 $black: #000;
 $cream: #fff7e6;
 $cream2: #ede6d6;
 $green: #8ccc4e;
+$green2: #5e9b20;
 $grey: #c1c1c1;
 $grey2: #929292;
 $grey3: #57544e;
@@ -164,4 +165,98 @@ body {
       line-height: 1.75;
     }
   }
+
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba($black, 0.7);
+    cursor: default;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+    z-index: 3;
+
+    &.is-visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &-dialog {
+      position: relative;
+      max-width: 320px;
+      max-height: 80vh;
+      border-radius: 5px;
+      background-color: $white;
+      overflow: auto;
+      cursor: default;
+
+      > * {
+        padding: 20px;
+      }
+    }
+
+    &-header {
+      background-color: $orange;
+      color: $white;
+      font-size: 18px;
+      text-shadow: 3px 3px $orange2;
+    }
+
+    &-image {
+      width: 150px;
+      margin: 0 auto;
+      display: block;
+      padding-bottom: 0;
+    }
+
+    &-content {
+      padding-left: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: $grey3;
+    }
+
+    &-footer {
+      background-color: $white;
+    }
+
+    &-close {
+      color: $white;
+      position: absolute;
+      right: 0;
+      font-size: 25px;
+      top: -8px;
+      background: transparent;
+    }
+
+    &-fake-buy {
+      margin: 0 auto;
+      display: block;
+      background-color: $green;
+      color: $white;
+      font-family: 'Gotham-Book';
+      text-shadow: 2px 2px $grey2;
+      padding: 10px 40px;
+      transition: .3s;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $green2;
+      }
+    }
+
+    &-close,
+    &-fake-buy {
+      cursor: pointer;
+      border: 0;
+    }
+  }
 }
+
